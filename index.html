@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para Aulas de Vôlei e Futsal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link para Font Awesome -->
+    <style>
+        /* Reset de margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #333); /* Gradiente de fundo */
+            color: #d4af37; /* Letras douradas */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: #d4af37; /* Letras douradas */
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 4px solid #d4af37;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #d4af37; /* Letras douradas */
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            background-color: #333;
+            color: #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="number"]:focus,
+        .form-group select:focus {
+            border-color: #d4af37; /* Dourado ao focar */
+            outline: none;
+            background-color: #444;
+        }
+
+        /* Estilo aprimorado para o select de escolha de esporte */
+        .form-group select {
+            appearance: none; /* Remove a seta padrão */
+            background-color: #444;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY2hldC9zdmcvMjU2NyIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjQ2Ij4KPHBhdGggZD0iTTEuNTg3IDQuNzc5VjMuMjAxQzAuMzA0IDEuMzc3IDAuNTk2IDEuMzc3QzAuNzU2IDEuMzc3QzAuODg5IDEuNDcyIDEuMDE1IDEuMjEyQzEuMzQwIDEuMDAzIDEuNTg3IDQuNzc5eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0iZmlsdGVyIj48L3BhdGg+Cjwvc3ZnPg=='); /* A seta personalizada */
+            background-position: right 10px center;
+            background-repeat: no-repeat;
+            background-size: 12px;
+        }
+
+        .form-group button {
+            background-color: #d4af37; /* Botões dourados */
+            color: black;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group button:hover {
+            background-color: #c8a02d;
+        }
+
+        .social-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-button a {
+            background-color: #0088cc;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .social-button a:hover {
+            background-color: #007bb5;
+        }
+
+        .social-button a i {
+            margin-right: 10px;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 20px;
+            color: #d4af37; /* Letras douradas no rodapé */
+            letter-spacing: 1px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="number"],
+            .form-group select {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .form-group button {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .social-button a {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+
+            .footer-content {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script>
+        function formatPhoneNumber(input) {
+            let phoneNumber = input.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+            // Condições para formatação
+            if (phoneNumber.length <= 2) {
+                input.value = '(' + phoneNumber; // Formatação (XX)
+            } else if (phoneNumber.length <= 6) {
+                input.value = '(' + phoneNumber.substring(0, 2) + ') ' + phoneNumber.substring(2); // Formatação (XX) XXXXX
+            } else if (phoneNumber.length <= 10) {
+                input.value = '(' + phoneNumber.substring(0, 2) + ') ' + phoneNumber.substring(2, 7) + '-' + phoneNumber.substring(7); // Formatação (XX) XXXXX-XXXX
+            } else {
+                input.value = '(' + phoneNumber.substring(0, 2) + ') ' + phoneNumber.substring(2, 7) + '-' + phoneNumber.substring(7, 11); // Limita o máximo de 11 números
+            }
+        }
+
+        function clearPhoneInput(input) {
+            // Se o campo de telefone estiver vazio, remover qualquer formatação
+            if (input.value === "") {
+                input.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>OS FALCÕES</h1>
+        <h2>Inscrição para Aulas de Vôlei e Futsal</h2>
+    </header>
+
+    <div class="container">
+        <form action="mailto:clubeosfalcoes2025@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="text" id="phone" name="phone" required oninput="formatPhoneNumber(this)" onblur="clearPhoneInput(this)" placeholder="(XX) XXXXX-XXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Idade</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="class">Escolha a modalidade</label>
+                <select id="class" name="class" required>
+                    <option value="Vôlei">Võlei</option>
+                    <option value="Futsal">Futsal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar Inscrição</button>
+            </div>
+        </form>
+
+        <div class="social-button">
+            <a href="https://www.instagram.com/os_falcoesofc/" target="_blank">
+                <i class="fab fa-instagram"></i> Visite nosso Instagram
+            </a>
+        </div>
+
+        <div class="footer-content">
+            <p>Esporte é vida!</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
